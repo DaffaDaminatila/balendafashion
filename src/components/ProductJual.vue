@@ -4,83 +4,77 @@ import Productw from "@/assets/Productw";
 import Producta from "@/assets/Producta";
 </script>
 <template>
-  <div class="produk">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="">
-          <img src="/img/logo_small.png" alt="" width="140" height="35" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active text-dark" href=""><router-link to="/">HOME</router-link></a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link text-dark" href="#">SHOP</a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link text-dark" href="">REVIEW</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link text-dark" href=""><router-link to="/about">PRODUCT</router-link></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href=""><router-link to="/login">LOGIN</router-link></a>
-            </li>
-          </ul>
+  <div class="produk py-5">
+    <div class="container">
+      <!-- Section Men -->
+      <section id="men" class="mb-5">
+        <div class="section-header text-center mb-5">
+          <h2 class="display-4 fw-bold">MEN'S COLLECTION</h2>
+          <div class="divider mx-auto"></div>
         </div>
-      </div>
-    </nav>
-    <section id="product">
-      <div class="p-3 p-md-5 text-center prod">
-        <div class="row">
-          <h3 class="judul">MEN</h3>
-          <div class="col mt-4" v-for="data in Products" :key="data">
-            <div class="card" style="width: 15rem">
-              <img :src="data.image" class="card-img-top" alt="..." />
-              <div class="card-body text-center">
-                <h5 class="card-title title-name">{{ data.nama }}</h5>
-                <h5 class="card-title title-name">{{ data.harga }}</h5>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3" v-for="data in Products" :key="data">
+            <div class="card h-100 product-card">
+              <div class="card-img-wrapper">
+                <img :src="data.image" class="card-img-top" :alt="data.nama" />
+              </div>
+              <div class="card-body text-center d-flex flex-column justify-content-between">
+                <h5 class="card-title fw-bold mb-2">{{ data.nama }}</h5>
+                <p class="card-text text-accent fw-bold">{{ data.harga }}</p>
+                <button class="btn btn-outline-dark btn-sm rounded-pill mt-2">View Details</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="p-3 p-md-5 text-center prods">
-        <div class="row">
-          <h3 class="judul">WOMEN</h3>
-          <div class="col mt-4" v-for="data in Productw" :key="data">
-            <div class="card" style="width: 15rem">
-              <img :src="data.image" class="card-img-top" alt="..." />
-              <div class="card-body text-center">
-                <h5 class="card-title title-name">{{ data.nama }}</h5>
-                <h5 class="card-title title-name">{{ data.harga }}</h5>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </section>
+
+      <!-- Section Women -->
+      <section id="women" class="mb-5">
+        <div class="section-header text-center mb-5">
+          <h2 class="display-4 fw-bold">WOMEN'S COLLECTION</h2>
+          <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3" v-for="data in Productw" :key="data">
+             <div class="card h-100 product-card">
+              <div class="card-img-wrapper">
+                <img :src="data.image" class="card-img-top" :alt="data.nama" />
+              </div>
+              <div class="card-body text-center d-flex flex-column justify-content-between">
+                <h5 class="card-title fw-bold mb-2">{{ data.nama }}</h5>
+                <p class="card-text text-accent fw-bold">{{ data.harga }}</p>
+                <button class="btn btn-outline-dark btn-sm rounded-pill mt-2">View Details</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="p-3 p-md-5 text-center prode">
-        <div class="row">
-          <h3 class="judul">ACCESORIES</h3>
-          <div class="col mt-4" v-for="data in Producta" :key="data">
-            <div class="card" style="width: 15rem">
-              <img :src="data.image" class="card-img-top" alt="..." />
-              <div class="card-body text-center">
-                <h5 class="card-title title-name">{{ data.nama }}</h5>
-                <h5 class="card-title title-name">{{ data.harga }}</h5>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </section>
+
+      <!-- Section Accessories -->
+      <section id="accessories" class="mb-5">
+        <div class="section-header text-center mb-5">
+          <h2 class="display-4 fw-bold">ACCESSORIES</h2>
+          <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row g-4">
+           <div class="col-12 col-sm-6 col-lg-3" v-for="data in Producta" :key="data">
+             <div class="card h-100 product-card">
+              <div class="card-img-wrapper">
+                <img :src="data.image" class="card-img-top" :alt="data.nama" />
+              </div>
+              <div class="card-body text-center d-flex flex-column justify-content-between">
+                <h5 class="card-title fw-bold mb-2">{{ data.nama }}</h5>
+                <p class="card-text text-accent fw-bold">{{ data.harga }}</p>
+                <button class="btn btn-outline-dark btn-sm rounded-pill mt-2">View Details</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -94,28 +88,72 @@ export default {
 </script>
 
 <style scoped>
-.title-name {
-  font-size: medium;
-  font-family: poppins;
+.produk {
+  background-color: var(--background-light);
 }
 
-html {
-  scroll-behavior: smooth;
+.section-header h2 {
+  color: var(--primary-color);
+  font-family: var(--font-main);
+  letter-spacing: 2px;
 }
 
-.prod {
-  background-color: #3f4e4f;
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
-.prods {
-  background-color: #a27b5c;
+
+.product-card {
+  border: none;
+  background: white;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
-.prode {
-  background-color: #2c3639;
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
-.judul {
+
+.card-img-wrapper {
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.btn-outline-dark {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--secondary-color);
   color: white;
-}
-.navbar {
-  background: #e3e2e7;
 }
 </style>

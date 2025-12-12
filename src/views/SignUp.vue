@@ -1,5 +1,4 @@
 <template>
-  <div class="signup"></div>
   <DaftarUp />
 </template>
 

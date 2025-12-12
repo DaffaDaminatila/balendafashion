@@ -1,5 +1,4 @@
 <template>
-  <div class="login"></div>
   <LoginSign />
 </template>
 
